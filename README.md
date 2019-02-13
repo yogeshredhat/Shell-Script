@@ -76,15 +76,6 @@ read -p 'Enter your name:' First last && echo  "\nHI" "First name is : $First " 
 
 Script 7) --> It will check apache status, if the status is down, it will start the service
 
-#!/bin/bash
-/etc/init.d/apache2 status > /dev/null
-a=$(echo $?);
-if [ $a -eq 0 ]; then
-echo " HI " > /dev/null
-else
-/etc/init.d/apache2 start
-fi
-
 To Start Automatic Process
 --------------------------
 #!/bin/bash
