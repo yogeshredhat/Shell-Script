@@ -85,7 +85,16 @@ else
 /etc/init.d/apache2 start
 fi
 
-
+To Start Automatic Process
+--------------------------
+#!/bin/bash
+/etc/init.d/network-manager status > /dev/null
+a=$(echo $?);
+if [ $a -eq 0 ]; then
+echo " HI " > /dev/null
+else
+/etc/init.d/network-manager start
+fi
 
 
 
